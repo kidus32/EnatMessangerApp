@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:layout_marginTop="8dp"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/avatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/avater" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textview_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginStart="6dp"
+        android:layout_toEndOf="@id/avatar"
+        android:layout_toRightOf="@id/avatar"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="16sp"
+        android:text="Birhane" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/chat_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:textSize="10sp"
+        android:text="2017-02-04" />
+    <TextView android:id="@+id/count"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textSize="10sp"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/chat_date"
+        android:layout_marginTop="5dp"
+        android:layout_alignRight="@id/chat_date"
+        android:layout_alignEnd="@id/chat_date"
+        android:text="5"
+        android:background="@drawable/bg_circle"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/chat_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/textview_username"
+        android:layout_alignStart="@id/textview_username"
+        android:layout_below="@id/textview_username"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor " />
+</RelativeLayout>
