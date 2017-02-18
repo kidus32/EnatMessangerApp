@@ -19,6 +19,10 @@ public class Chat implements Serializable {
         this.chatDate = chatDate;
     }
 
+    public Chat() {
+
+    }
+
     public int getUserAvatar() {
         return userAvatar;
     }
