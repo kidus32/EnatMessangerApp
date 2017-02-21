@@ -27,4 +27,5 @@
     <string name="action_logout">Logout</string>
     <string name="search_hint">Search messages</string>
     <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_dialer">Dialer</string>
 </resources>

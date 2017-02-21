@@ -74,6 +74,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             chat.setUsername(cursor.getString(2));
             chats.add(chat);
         } while (cursor.moveToNext());
+        cursor.close();
         return chats;
     }
 
@@ -84,10 +85,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     }
 
-    public List<Chat> getMessageAllMessage() {
+    public List<Chat> getAllMessages() {
         List<Chat> chats = new ArrayList<>();
         String sql = "SELECT * FROM" + TABLE_MSGS;
-        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery(sql, null);
         do {
             Chat chat = new Chat();
@@ -96,6 +97,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             chat.setChatMessage(cursor.getString(2));
             chats.add(chat);
         } while (cursor.moveToNext());
+        cursor.close();
         return chats;
     }
 }
